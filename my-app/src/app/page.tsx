@@ -1,13 +1,4 @@
-import {
-  ExternalLink,
-  Github,
-  Code,
-  Briefcase,
-  GraduationCap,
-  Award,
-  Zap,
-  Users,
-} from 'lucide-react';
+import { ExternalLink, Github, Code, Briefcase } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import {
   Card,
