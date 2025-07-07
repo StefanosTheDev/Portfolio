@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Code, Briefcase } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import {
   Card,
@@ -125,19 +125,116 @@ export default function Portfolio() {
               </span>
             </div> */}
           </div>
-
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-black">
+          <h1 className="text-4xl md:text-4xl font-bold mb-6 tracking-tight text-black-600">
             STEFANOS SOPHOCLEOUS
           </h1>
 
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px bg-black flex-1"></div>
-            <p className="text-2xl md:text-3xl font-mono text-blue-600 px-4 font-semibold">
-              Software Engineer
+            <p className="text-2xl md:text-3xl font-mono text-black-600 px-4 font-semibold">
+              Portfolio{' '}
             </p>
             <div className="h-px bg-black flex-1"></div>
           </div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-20">
+              {/* <h2 className="text-5xl md:text-6xl font-bold mb-6 text-black">
+                Recent Work
+              </h2> */}
+              {/* <p className="text-xl text-gray-600 font-mono">
+                {
+                  '// A compilation of my most recent work & current work in progress '
+                }
+              </p> */}
+              <div className="animate-bounce">
+                <p className="font-mono text-gray-500">
+                  {'Check Out Some Of My Recent Work! ↓'}
+                </p>
+              </div>
+            </div>
 
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {projects.map((project, index) => (
+                <Card
+                  key={index}
+                  className="bg-white border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden group hover:border-blue-600"
+                >
+                  <div className="p-8">
+                    <CardHeader className="p-0 mb-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <CardTitle className="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors">
+                          {project.title}
+                        </CardTitle>
+                        <div className="flex gap-2">
+                          <span
+                            className={`px-3 py-1 rounded-full text-xs font-mono border ${
+                              project.status === 'Production'
+                                ? 'bg-green-50 text-green-700 border-green-200'
+                                : project.status === 'Enterprise'
+                                ? 'bg-blue-50 text-blue-700 border-blue-200'
+                                : 'bg-gray-50 text-gray-700 border-gray-200'
+                            }`}
+                          >
+                            {project.status}
+                          </span>
+                          <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-mono border border-blue-200">
+                            {project.impact}
+                          </span>
+                        </div>
+                      </div>
+                      <CardDescription className="text-gray-700 leading-relaxed text-base">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent className="p-0">
+                      <div className="flex flex-wrap gap-2 mb-8">
+                        {project.tech.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1.5 bg-gray-50 text-gray-700 text-sm font-mono rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex gap-4">
+                        <Button
+                          variant="outline"
+                          className="flex-1 font-medium bg-white border-2 border-gray-300 hover:border-black hover:bg-black hover:text-white text-gray-700 rounded-xl py-3 transition-all duration-300"
+                          asChild
+                        >
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            View Code
+                          </a>
+                        </Button>
+
+                        <Button
+                          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                          asChild
+                        >
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Access Site
+                          </a>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
           {/* <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-12">
             EX-Department Of Defense Software Engineer with over
             <span className="text-blue-600 font-bold"> 5+ years</span> of
@@ -149,45 +246,6 @@ export default function Portfolio() {
               solutions.
             </span>
           </p> */}
-
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <div className="flex items-center gap-2 bg-white border-2 border-blue-600 rounded-lg px-4 py-2 shadow-lg">
-              <Code className="w-5 h-5 text-blue-600" />
-              <span className="text-blue-600 font-mono font-semibold">
-                Full-Stack Developer
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-blue-600 rounded-lg px-4 py-2 shadow-lg">
-              <Code className="w-5 h-5 text-blue-600" />
-              <span className="text-blue-600 font-mono font-semibold">
-                AWS Certified CFL-02
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-blue-600 rounded-lg px-4 py-2 shadow-lg">
-              <Code className="w-5 h-5 text-blue-600" />
-              <span className="text-blue-600 font-mono font-semibold">
-                Active Secret Clearance
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-blue-600 rounded-lg px-4 py-2 shadow-lg">
-              <Code className="w-5 h-5 text-blue-600" />
-              <span className="text-black-600 font-mono font-semibold">
-                COMPTIA SECURITY + Certified
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-black rounded-lg px-4 py-2 shadow-lg">
-              <Briefcase className="w-5 h-5 text-black" />
-              <span className="text-black font-mono font-semibold">
-                EX-Department Of Defense SWE
-              </span>
-            </div>
-          </div>
-
-          <div className="animate-bounce">
-            <p className="font-mono text-gray-500">
-              {'scroll to checkout my work! ↓'}
-            </p>
-          </div>
         </div>
       </section>
       {/* Projects Section */}
@@ -215,101 +273,6 @@ export default function Portfolio() {
             backgroundSize: '50px 50px',
           }}
         />
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-black">
-              Recent Work
-            </h2>
-            <p className="text-xl text-gray-600 font-mono">
-              {
-                '// A compilation Of My Most Recent Work & Current Work In Progress '
-              }
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="bg-white border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl overflow-hidden group hover:border-blue-600"
-              >
-                <div className="p-8">
-                  <CardHeader className="p-0 mb-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <CardTitle className="text-2xl font-bold text-black group-hover:text-blue-600 transition-colors">
-                        {project.title}
-                      </CardTitle>
-                      <div className="flex gap-2">
-                        <span
-                          className={`px-3 py-1 rounded-full text-xs font-mono border ${
-                            project.status === 'Production'
-                              ? 'bg-green-50 text-green-700 border-green-200'
-                              : project.status === 'Enterprise'
-                              ? 'bg-blue-50 text-blue-700 border-blue-200'
-                              : 'bg-gray-50 text-gray-700 border-gray-200'
-                          }`}
-                        >
-                          {project.status}
-                        </span>
-                        <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-mono border border-blue-200">
-                          {project.impact}
-                        </span>
-                      </div>
-                    </div>
-                    <CardDescription className="text-gray-700 leading-relaxed text-base">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="p-0">
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.tech.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1.5 bg-gray-50 text-gray-700 text-sm font-mono rounded-lg border border-gray-200 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex gap-4">
-                      <Button
-                        variant="outline"
-                        className="flex-1 font-medium bg-white border-2 border-gray-300 hover:border-black hover:bg-black hover:text-white text-gray-700 rounded-xl py-3 transition-all duration-300"
-                        asChild
-                      >
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          View Code
-                        </a>
-                      </Button>
-
-                      <Button
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-                        asChild
-                      >
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Access Site
-                        </a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
       </section>
       {/* Footer */}
       <footer className="py-16 px-4 border-t-2 border-black">
