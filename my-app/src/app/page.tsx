@@ -13,7 +13,7 @@ export default function Portfolio() {
     {
       title: 'Terminal Talks',
       description:
-        'Enterprise-grade real-time communication platform with 10K+ active users. Features advanced WebSocket architecture, Redis caching, and microservices design.',
+        'A platform that delivers AI-generated audio lectures for developers, transforming technical documentation into an on-the-go learning experience. The goal is to build the most optimized, voice-powered documentation library for developers',
       link: 'https://github.com/stefanos/terminal-talks',
       demo: 'https://terminal-talks.vercel.app',
       tech: [
@@ -23,24 +23,48 @@ export default function Portfolio() {
         'Vercel',
         'Tailwind CSS',
         'PostgreSQL',
+        'Elevan Labs API',
+        'ChatGPT API',
+        'Clerk Auth',
+        'Stripe',
       ],
       status: 'Production',
-      impact: '10K+ Users',
+      // impact: '10K+ Users',
+    },
+    {
+      title: 'Trading Algorithm Backtester',
+      description:
+        ' Back In Early 2025, I developed leveraging AI a CVD delta trend based algorithm for an experience trader. However, backtesting the Algoirthym profit margins were critical so we haveh a full stack app',
+      link: 'https://github.com/stefanos/ai-code-assistant',
+      demo: 'https://marketplace.visualstudio.com/items?itemName=stefanos.ai-assistant',
+      tech: ['TypeScript', 'VS Code API', 'OpenAI', 'Node.js', 'Webpack'],
+      status: 'Published',
+      impact: '50K+ Downloads',
     },
     {
       title: 'Prime Health',
       description:
-        'HIPAA-compliant healthcare management system with AI-powered diagnostics. Reduced patient wait times by 40% and improved care coordination.',
+        'A web application that is designed to help people with health issues navigate their current situation. Offering insights on holistic health alternatives, recommendations to Doctors & things to research',
       link: 'https://github.com/stefanos/prime-health',
       demo: 'https://prime-health.vercel.app',
-      tech: ['React', 'Node.js', 'MongoDB', 'TensorFlow', 'AWS', 'Stripe'],
-      status: 'Enterprise',
-      impact: '40% Efficiency',
+      tech: [
+        'React',
+        'Node.js',
+        'MongoDB',
+        'Tailwind CSS',
+        'Vercel',
+        'Clerk Auth',
+        'Stripe',
+        'ChatGPT API',
+      ],
+      status: 'WIP',
+      impact: 'User Count',
     },
+
     {
-      title: 'FinTech Dashboard',
+      title: 'AI Lead Generation Chatbot',
       description:
-        'Real-time financial analytics platform processing $2M+ daily transactions. Features advanced data visualization and predictive modeling.',
+        'An AI Agent build on the voiceflow platform that was live for one of our clients. Provided is a breakdown of how the bot works & and provides insight to some of the ClearStackAI initiatves were. ',
       link: 'https://github.com/stefanos/fintech-dashboard',
       demo: 'https://fintech-dashboard.vercel.app',
       tech: [
@@ -53,16 +77,6 @@ export default function Portfolio() {
       ],
       status: 'Production',
       impact: '$2M+ Daily',
-    },
-    {
-      title: 'AI Code Assistant',
-      description:
-        'VS Code extension with 50K+ downloads. Leverages OpenAI GPT-4 for intelligent code completion and automated documentation generation.',
-      link: 'https://github.com/stefanos/ai-code-assistant',
-      demo: 'https://marketplace.visualstudio.com/items?itemName=stefanos.ai-assistant',
-      tech: ['TypeScript', 'VS Code API', 'OpenAI', 'Node.js', 'Webpack'],
-      status: 'Published',
-      impact: '50K+ Downloads',
     },
   ];
 
@@ -128,11 +142,10 @@ export default function Portfolio() {
           <h1 className="text-4xl md:text-4xl font-bold mb-6 tracking-tight text-black-600">
             STEFANOS SOPHOCLEOUS
           </h1>
-
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px bg-black flex-1"></div>
-            <p className="text-2xl md:text-3xl font-mono text-black-600 px-4 font-semibold">
-              Portfolio{' '}
+            <p className="text-2xl md:text-3xl font-mono text-grey-600 px-4 font-semibold">
+              Recent Development Work{' '}
             </p>
             <div className="h-px bg-black flex-1"></div>
           </div>
@@ -141,16 +154,18 @@ export default function Portfolio() {
               {/* <h2 className="text-5xl md:text-6xl font-bold mb-6 text-black">
                 Recent Work
               </h2> */}
-              {/* <p className="text-xl text-gray-600 font-mono">
-                {
-                  '// A compilation of my most recent work & current work in progress '
-                }
-              </p> */}
-              <div className="animate-bounce">
-                <p className="font-mono text-gray-500">
-                  {'Check Out Some Of My Recent Work! ↓'}
+              {
+                <p className="text-xl text-gray-600 font-mono">
+                  {
+                    '// I am a motivated technologist with a deep passion for solving problems. Through my pursuit in the Tech Space, I have found my passion in Full Stack Development. I am excited for the opportunity to join a development team and grow with goal driven team members'
+                  }
                 </p>
-              </div>
+              }
+              {/* <div className="animate-bounce">
+                <p className="font-mono text-gray-500">
+                  {' // Check Out Some Of My Published Work! ↓'}
+                </p>
+              </div> */}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -170,9 +185,9 @@ export default function Portfolio() {
                             className={`px-3 py-1 rounded-full text-xs font-mono border ${
                               project.status === 'Production'
                                 ? 'bg-green-50 text-green-700 border-green-200'
-                                : project.status === 'Enterprise'
-                                ? 'bg-blue-50 text-blue-700 border-blue-200'
-                                : 'bg-gray-50 text-gray-700 border-gray-200'
+                                : project.status === 'WIP'
+                                ? 'bg-yellow-50 text-yellow-700 border-yellow-200'
+                                : 'bg-yellow-50 text-yellow-700 border-yellow-200'
                             }`}
                           >
                             {project.status}
@@ -279,10 +294,10 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <h3 className="text-3xl font-bold mb-4 text-black">
-              Code What Excited :D
+              Code What Excites!
             </h3>
             <p className="text-gray-600 font-mono text-lg">
-              {'// Ready to collaborate on your next project'}
+              {'// Check Out My Contact Info & Links!'}
             </p>
           </div>
 
