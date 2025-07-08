@@ -11,7 +11,7 @@ import {
 export default function Portfolio() {
   const projects = [
     {
-      title: 'Terminal Talks',
+      title: 'TerminalTalk.dev',
       description:
         'A platform that delivers AI-generated audio lectures for developers, transforming technical documentation into an on-the-go learning experience. The goal is to build the most optimized, voice-powered documentation library for developers',
       link: 'https://github.com/stefanos/terminal-talks',
@@ -32,7 +32,7 @@ export default function Portfolio() {
       // impact: '10K+ Users',
     },
     {
-      title: 'Trading Algorithm Backtester',
+      title: 'QSTBacktester.com',
       description:
         ' Back In Early 2025, I developed leveraging AI a CVD delta trend based algorithm for an experience trader. However, backtesting the Algoirthym profit margins were critical so we haveh a full stack app',
       link: 'https://github.com/stefanos/ai-code-assistant',
@@ -42,7 +42,7 @@ export default function Portfolio() {
       impact: '50K+ Downloads',
     },
     {
-      title: 'Prime Health',
+      title: 'PrimeHealth.com',
       description:
         'A web application that is designed to help people with health issues navigate their current situation. Offering insights on holistic health alternatives, recommendations to Doctors & things to research',
       link: 'https://github.com/stefanos/prime-health',
@@ -60,7 +60,25 @@ export default function Portfolio() {
       status: 'WIP',
       impact: 'User Count',
     },
-
+    {
+      title: 'DanielMeeker.com ',
+      description:
+        'A web application that is designed to help people with health issues navigate their current situation. Offering insights on holistic health alternatives, recommendations to Doctors & things to research',
+      link: 'https://github.com/stefanos/prime-health',
+      demo: 'https://prime-health.vercel.app',
+      tech: [
+        'React',
+        'Node.js',
+        'MongoDB',
+        'Tailwind CSS',
+        'Vercel',
+        'Clerk Auth',
+        'Stripe',
+        'ChatGPT API',
+      ],
+      status: 'WIP',
+      impact: 'User Count',
+    },
     {
       title: 'AI Lead Generation Chatbot',
       description:
